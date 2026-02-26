@@ -1,4 +1,4 @@
-cartopy_ne_path: '/scratch4/NAGAPE/epic/Chan-hoo.Jeon/ufsda_test/ufs-da-workflow/fix/NaturalEarth'
+cartopy_ne_path: '../py_ne'
 cdate: '2024-02-24-00'
 cyc: '00'
 work_dir: '../output'

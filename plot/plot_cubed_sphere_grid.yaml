@@ -8,7 +8,7 @@ fn_data_inc_sfc: 'cubed_sphere_grid_sfcinc.jedi.nc'
 plot_increment_atm: 'YES'
 plot_increment_sfc: 'NO'
 PY_LOG_LEVEL: 'INFO'
-cartopy_ne_path: '/scratch4/NAGAPE/epic/Chan-hoo.Jeon/ufsda_test/ufs-da-workflow/fix/NaturalEarth'
+cartopy_ne_path: '../py_ne'
 colorbar_option: 'fixed'
 var_list_atm:
   - o3mr

@@ -1,4 +1,4 @@
-cartopy_ne_path: '/scratch4/NAGAPE/epic/Chan-hoo.Jeon/ufsda_test/ufs-da-workflow/fix/NaturalEarth'
+cartopy_ne_path: '../py_ne'
 work_dir: './'
 obs_dir: '../obs'
 JEDI_TYPE_FV3: 'YES'
