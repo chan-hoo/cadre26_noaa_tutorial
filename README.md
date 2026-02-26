@@ -18,6 +18,7 @@ vim jedi_3dvar_fv3inc_2024022400.yaml
 cd ..
 vim run_3dvar_[platform].sh
 ```
+where `[platform]` is `ursa`, `hercules`, or `orion`.
 
 3. Check account (project) name and change it:
 
@@ -50,6 +51,7 @@ source load_py_env.[ploatform]
 ```
 vim plot_[option].yaml
 ```
+where `[option]` is `cubed_sphere_grid`, `hofx_stats`, or `obs_file`.
 
 10. Run plotting scripts:
 ```
