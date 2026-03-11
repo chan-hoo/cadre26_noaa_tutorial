@@ -8,6 +8,7 @@ git clone https://github.com/chan-hoo/cadre26_noaa_tutorial
 2. Check JEDI input YAML files and modify them as needed:
 ```
 cd input_yaml
+cp Day1/jedi_3dvar* .
 ```
 - FV3-JEDI YAML file:
 ```
