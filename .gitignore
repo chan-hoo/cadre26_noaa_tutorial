@@ -1,3 +1,4 @@
 exp_case/
+input_yaml/jedi_3dvar_fv3*
 log.*
 *.swp

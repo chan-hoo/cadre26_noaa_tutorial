@@ -8,15 +8,22 @@ git clone https://github.com/chan-hoo/cadre26_noaa_tutorial
 2. Check JEDI input YAML files and modify them as needed:
 ```
 cd input_yaml
+```
+- Day1:
+```
 cp Day1/jedi_3dvar* .
-```
-- FV3-JEDI YAML file:
-```
 vim jedi_3dvar_fv3_2024022400.yaml
-```
-- FV3-JEDI increment YAML file:
-```
 vim jedi_3dvar_fv3inc_2024022400.yaml
+```
+- Day2:
+```
+cp Day2/jedi_3dvar* .
+```
+- Day3:
+```
+cp Day3/jedi_3dvar* .
+sed '399r Day3/obs_[option].yaml' jedi_3dvar_fv3_template.yaml > jedi_3dvar_fv3_2024022400.yaml
+vim jedi_3dvar_fv3_2024022400.yaml
 ```
 
 3. Open job-card script:
