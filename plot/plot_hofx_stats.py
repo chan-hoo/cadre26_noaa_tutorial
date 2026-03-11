@@ -225,8 +225,8 @@ if __name__ == '__main__':
         svar_list.append("gnssro_cosmic2")
     if OBS_ATM_OZONE_OMPSNP_NPP == "YES":
         svar_list.append("ozone.ompsnp_npp")
-#    if OBS_ATM_OZONE_OMPSTC_NPP == "YES":
-#        svar_list.append("ozone.ompstc_npp")
+    if OBS_ATM_OZONE_OMPSTC_NPP == "YES":
+        svar_list.append("ozone.ompstc_npp")
     if OBS_SNOW_GHCN == "YES":
         svar_list.append("ghcn_snow")
     if OBS_SNOW_IMS == "YES":
