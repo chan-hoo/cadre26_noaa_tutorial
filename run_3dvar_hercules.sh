@@ -15,7 +15,7 @@ set -xue
 ulimit -s unlimited; ulimit -a;
 
 # Parameters
-JEDI_BIN_PATH="/work2/noaa/epic/chjeon/ufsda_hercules/jedi/build/bin"
+JEDI_BIN_PATH="/work2/noaa/epic/chjeon/cadre26_hercules/GDASApp/build/bin"
 JEDI_INPUT_PATH="/work2/noaa/epic/chjeon/cadre26/input_data"
 EXP_NAME_BASE="cadre26"
 
@@ -26,7 +26,7 @@ exp_dir_path="${cdir}/exp_case/${EXP_NAME_BASE}.${SLURM_JOB_ID}"
 mkdir -p ${exp_dir_path}
 
 # Copy input YAML files
-cp -r ${cdir}/input_yaml/* ${exp_dir_path}
+cp -r ${cdir}/input_yaml/jedi_3dvar_fv3* ${exp_dir_path}
 
 # Sym-link input directories
 ln -nsf ${JEDI_INPUT_PATH}/* ${exp_dir_path}

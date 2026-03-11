@@ -25,7 +25,7 @@ exp_dir_path="${cdir}/exp_case/${EXP_NAME_BASE}.${SLURM_JOB_ID}"
 mkdir -p ${exp_dir_path}
 
 # Copy input YAML files
-cp -r ${cdir}/input_yaml/* ${exp_dir_path}
+cp -r ${cdir}/input_yaml/jedi_3dvar_fv3* ${exp_dir_path}
 
 # Sym-link input directories
 ln -nsf ${JEDI_INPUT_PATH}/* ${exp_dir_path}
