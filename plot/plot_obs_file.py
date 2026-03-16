@@ -99,22 +99,22 @@ def main():
         obs_plot("ghcn",PDY,cyc,work_dir,obs_prefix,"ghcn_snow","ghcn_snow")
     # Plot IMS
     if OBS_SNOW_IMS == "YES":
-        obs_plot("ims",PDY,cyc,work_dir,obs_prefix,"ims_snow.tm00","ims_snow.tm00")
+        obs_plot("ims",PDY,cyc,work_dir,obs_prefix,"ims_snow.tm00","ims_snow")
     # Plot SMAP
     if OBS_SWC_SMAP == "YES":
-        obs_plot("smap",PDY,cyc,work_dir,obs_prefix,"smap_combined","smap_combined")
+        obs_plot("smap",PDY,cyc,work_dir,obs_prefix,"smap_combined","smap_soil_moisture")
     # Plot SMOPS
     if OBS_SWC_SMOPS == "YES":
-        obs_plot("smops",PDY,cyc,work_dir,obs_prefix,"smops","smops")
+        obs_plot("smops",PDY,cyc,work_dir,obs_prefix,"smops","smops_soil_moisture")
     # Plot SOCA
     if JEDI_TYPE_SOCA == "YES":
         if TYPE_ANAL_FCST == "ctest":
-            obs_plot("soca_sst",PDY,cyc,work_dir,obs_prefix,"sst","sst")
-            obs_plot("soca_sss",PDY,cyc,work_dir,obs_prefix,"sss","sss")
-            obs_plot("soca_adt",PDY,cyc,work_dir,obs_prefix,"adt","adt")
-            obs_plot("soca_prof_t",PDY,cyc,work_dir,obs_prefix,"prof","prof")
-            obs_plot("soca_prof_s",PDY,cyc,work_dir,obs_prefix,"prof","prof")
-            obs_plot("soca_icec",PDY,cyc,work_dir,obs_prefix,"icec","icec")
+            obs_plot("soca_sst",PDY,cyc,work_dir,obs_prefix,"sst","SeaSurfaceTemp")
+            obs_plot("soca_sss",PDY,cyc,work_dir,obs_prefix,"sss","SeaSurfaceSalinity")
+            obs_plot("soca_adt",PDY,cyc,work_dir,obs_prefix,"adt","ADT")
+            obs_plot("soca_prof_t",PDY,cyc,work_dir,obs_prefix,"prof","InsituTemperature")
+            obs_plot("soca_prof_s",PDY,cyc,work_dir,obs_prefix,"prof","InsituSalinity")
+            obs_plot("soca_icec",PDY,cyc,work_dir,obs_prefix,"icec","SeaIceFraction")
         else:
             obs_plot("soca_adt",PDY,cyc,work_dir,obs_prefix,"adt_ssh","ADT")
             obs_plot("soca_sst",PDY,cyc,work_dir,obs_prefix,"sst_satellite","SeaSurfaceTemp")
