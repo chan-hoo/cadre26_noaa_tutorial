@@ -34,8 +34,8 @@ cost function:
     provider: ufs
     datetime: '2024-02-24T00:00:00Z'
     filenames:
-    - ufsda.t18z.atm.f006.cubed_sphere_grid.nc
-    - ufsda.t18z.sfc.f006.cubed_sphere_grid.nc
+    - ufsda.t18z.cubed_sphere_grid_atmf006.nc
+    - ufsda.t18z.cubed_sphere_grid_sfcf006.nc
     max allowable geometry difference: 1e-4
     state variables:
     - eastward_wind
@@ -101,7 +101,7 @@ cost function:
           saber block name: gsi static covariance
           read:
             gsi akbk: ./fv3jedi/akbk.nc4
-            gsi error covariance file: ./berror/gsi-coeffs-gfs-global.nc4
+            gsi error covariance file: ./berror/gsi-coeffs-gfs-global.nc
             gsi berror namelist file: ./berror/gfs_gsi_global.nml
             processor layout x direction: 12
             processor layout y direction: 8
@@ -400,7 +400,7 @@ cost function:
 
 ##########################################################################
 # Add obs spaces to
-##########################################################################      
+##########################################################################
 variational:
   minimizer:
     algorithm: DRPCG
@@ -448,7 +448,7 @@ final:
     output:
       state component:
         filetype: cube sphere history
-        filename: ./output/cubed_sphere_grid_atminc.jedi.nc
+        filename: ./anl/cubed_sphere_grid_atminc.jedi.nc
         provider: ufs
         fields to write:
         - eastward_wind
