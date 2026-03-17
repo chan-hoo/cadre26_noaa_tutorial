@@ -448,7 +448,7 @@ final:
     output:
       state component:
         filetype: cube sphere history
-        filename: ./anl/cubed_sphere_grid_atminc.jedi.nc
+        filename: ./output/cubed_sphere_grid_atminc.jedi.nc
         provider: ufs
         fields to write:
         - eastward_wind
