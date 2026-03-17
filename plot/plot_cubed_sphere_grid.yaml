@@ -21,8 +21,8 @@ var_list_sfc:
   - soilm
   - spfh2m
   - tmp2m
-zlevel_number_atm: '1'
-zlevel_number_sfc: '1'
+zlevel_number_atm: '10'
+zlevel_number_sfc: '10'
 out_title_base: 'CADRE::FV3-JEDI::2024-02-24-00::'
 out_fn_base: 'cadre_fv3jedi_2024022400_'
 
