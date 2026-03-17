@@ -34,8 +34,8 @@ cost function:
     provider: ufs
     datetime: '2024-02-24T00:00:00Z'
     filenames:
-    - ufsda.t18z.cubed_sphere_grid_atmf006.nc
-    - ufsda.t18z.cubed_sphere_grid_sfcf006.nc
+    - ufsda.t18z.atm.f006.cubed_sphere_grid.nc
+    - ufsda.t18z.sfc.f006.cubed_sphere_grid.nc
     max allowable geometry difference: 1e-4
     state variables:
     - eastward_wind
