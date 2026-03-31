@@ -1,6 +1,5 @@
 cartopy_ne_path: '../py_ne'
 cdate: '2024-02-24-00'
-channel_num: 1
 cyc: '00'
 work_dir: '../output'
 hofx_data_path: './'
