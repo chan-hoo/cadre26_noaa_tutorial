@@ -140,6 +140,10 @@ def plot_data(path_data,fn_data,var_nm,zlvlm1,out_title_base,out_fn_base,
     except: raise Exception('Could NOT find the file',fp_data)
     logging.info(f''' Variables: {list(data_raw.variables)}''')
 
+    # Check pfull (1->127: high->low altitude: 127=near-surface, 76=505.65mb)
+    pfull = data_raw['pfull']
+    logging.debug(f''' PFULL: {pfull}''')
+
     # Extract valid variable
     var_orig = data_raw[var_nm]
     var_data = np.ma.masked_invalid(var_orig.values)
@@ -183,9 +187,9 @@ def plot_data(path_data,fn_data,var_nm,zlvlm1,out_title_base,out_fn_base,
         if colorbar_option == "fixed":
             cbar_extend = 'both'
             if var_nm == "tmp":
-                cs_max = 0.1
+                cs_max = 1
             elif var_nm == "ugrd" or var_nm == "vgrd":
-                cs_max = 0.2
+                cs_max = 2
             elif var_nm == "o3mr":
                 cs_max = 1.0e-12
             elif var_nm == "spfh":
