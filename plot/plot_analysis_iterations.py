@@ -198,7 +198,7 @@ def plot_data_log(fp_data_log,svar,var_nm,qc_str_obs,num_ch,out_fn_base,work_dir
         bar_half=bar_wdth*0.5
         # figsize=(width,height) in inches
         fig, ax = plt.subplots(nrows=1, ncols=1, sharex=True, figsize=(5,2))
-        ax.bar(x-bar_half, nobs_in_iter, bar_wdth, color='blue', label='Nobs:in')
+        ax.bar(x-bar_half, nobs_in_iter, bar_wdth, color='blue', label='Nobs:raw')
         ax.bar(x+bar_half, nobs_qc_iter, bar_wdth, color='red', label='Nobs:QC')
 
         ax.set_xticks(x)
