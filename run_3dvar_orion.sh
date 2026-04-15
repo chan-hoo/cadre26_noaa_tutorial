@@ -39,6 +39,9 @@ cd ${exp_dir_path}
 # Create output directory
 mkdir -p output
 
+# Create plot_output directory
+mkdir -p plot_output
+
 # Load modules
 module purge
 module use /apps/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.1.0/install/modulefiles/Core

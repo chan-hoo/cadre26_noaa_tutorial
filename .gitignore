@@ -1,3 +1,5 @@
+diagnostics/__pychache__/
+diagnostics/py_env/cadre_pyenv/
 exp_case/
 input_yaml/jedi_3dvar_fv3*
 log.*
