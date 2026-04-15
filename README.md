@@ -50,9 +50,9 @@ vim log.cadre26.[job_id]
 cd exp_case/cadre26.[job_id]
 ```
 
-8. Move to plot directory:
+8. Move to diagnostics directory:
 ```
-cd plot
+cd diagnostics
 ```
 
 9. Load python environment:
@@ -60,13 +60,15 @@ cd plot
 source load_py_env.[ploatform]
 ```
 
-10. Check YAML files for plotting:
+10. Check YAML files for diagnostics:
 ```
-vim plot_[option].yaml
+vim diag_fv3-jedi_obs.yaml
+vim diag_fv3-jedi-tiles_[option].yaml
 ```
-where `[option]` is `cubed_sphere_grid`, `hofx_stats`, or `obs_file`.
 
-11. Run plotting scripts:
+11. Run python scripts:
 ```
-./plot_[option].py
+./increment_maps_tiles.py --yaml diag_fv3-jedi-tiles_[option].yaml
+./obs_diagnostic.py --yaml diag_fv3-jedi_obs.yaml
+./spectra_analysis_tiles.py --yaml diag_fv3-jedi-tiles_[option].yaml
 ```
