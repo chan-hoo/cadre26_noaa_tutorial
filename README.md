@@ -70,5 +70,5 @@ vim diag_fv3-jedi-tiles_[option].yaml
 ```
 ./increment_maps_tiles.py --yaml diag_fv3-jedi-tiles_[option].yaml
 ./obs_diagnostic.py --yaml diag_fv3-jedi_obs.yaml
-./spectra_analysis_tiles.py --yaml diag_fv3-jedi-tiles_[option].yaml
+./spectra_analysis_tiles.py --yaml diag_fv3-jedi-tiles_[option:day2/day3].yaml
 ```
