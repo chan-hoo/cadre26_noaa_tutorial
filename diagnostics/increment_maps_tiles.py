@@ -129,18 +129,33 @@ def get_map_limits(var, is_diff=False):
 # Tapered horizontal colorbar helper
 # ---------------------------------------------------------
 def tapered_colorbar(fig, im, ax, label=None):
+    # Create colorbar
     cbar = fig.colorbar(
         im, ax=ax,
         orientation="horizontal",
         pad=0.12,
-        fraction=0.05,
-        aspect=40
+        fraction=0.03,
+        aspect=30
     )
     cbar.ax.tick_params(labelsize=7)
+
+    pos = cbar.ax.get_position()
+    cbar.ax.set_position([
+        pos.x0,          # left
+        pos.y0 + 0.03,   # bottom (move up by +0.03)
+        pos.width,       # width
+        pos.height       # height
+    ])
+    
     if label:
         cbar.set_label(label, fontsize=8)
+
     cbar.formatter.set_powerlimits((-2, 2))
     cbar.update_ticks()
+
+    # --- CRITICAL: force layout BEFORE adding taper ---
+    fig.canvas.draw()
+
     return cbar
 
 # ---------------------------------------------------------
@@ -152,8 +167,10 @@ def plot_single(Lon, Lat, field, var, lev, exp_name, prefix, outname):
 
     vmin, vmax = get_map_limits(var, is_diff=False)
 
-    fig = plt.figure(figsize=(10, 5), constrained_layout=True)
-    fig.suptitle(title, y=0.9)
+    fig = plt.figure(figsize=(10, 5))
+    fig.subplots_adjust(top=0.88)
+
+    fig.suptitle(title, y=0.96, x=0.15, ha="left")
 
     ax = fig.add_subplot(1, 1, 1, projection=ccrs.PlateCarree())
     ax.set_global()
@@ -163,7 +180,7 @@ def plot_single(Lon, Lat, field, var, lev, exp_name, prefix, outname):
     im = ax.pcolormesh(Lon, Lat, field, cmap="coolwarm",
                        shading="auto", vmin=vmin, vmax=vmax)
 
-    tapered_colorbar(fig, im, ax)
+    tapered_colorbar(fig, im, ax, label=f"{var} Increment") 
 
     plt.savefig(outname, dpi=150)
     plt.close()
@@ -223,6 +240,9 @@ def plot_three(Lon, Lat, ctrl, exp, var, lev, ctrl_name, exp_name, outname):
 def plot_zonal_mean_colormap(lat, pressure, zm, var, exp_name, outname):
     fig, ax = plt.subplots(figsize=(8, 6))
 
+    # Prevent colorbar overlap
+    fig.subplots_adjust(bottom=0.20)
+
     cs = ax.contourf(lat, pressure, zm, levels=31,
                      cmap="RdBu_r", extend="both")
 
@@ -232,14 +252,11 @@ def plot_zonal_mean_colormap(lat, pressure, zm, var, exp_name, outname):
     ax.set_yscale("log")
     ax.invert_yaxis()
 
-    # Softer tropopause line
     ax.axhline(200, color="k", linestyle="--", linewidth=0.3, alpha=0.5)
 
-    # Softer jet marker
     ax.text(0, 250, "Jet Level",
             ha="center", va="bottom",
             fontsize=6, color="k",
-            fontweight="normal",
             alpha=0.5,
             bbox=dict(facecolor="white", alpha=0.3, edgecolor="none"))
 

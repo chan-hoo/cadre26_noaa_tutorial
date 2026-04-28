@@ -1,4 +1,4 @@
-outdir: "./plot_output"
+outdir: "./plot-outputs-obs"
 
 observations:
 
@@ -9,7 +9,7 @@ observations:
     type: atms
     variable: brightnessTemperature
     diag: "../output/diag.atms_n20_2024022400.nc"
-    outdir: "../plot_output"
+    outdir: "./plot-outputs-obs"
     diagnostics:
       hist: true
       stats: true
@@ -24,7 +24,7 @@ observations:
     type: scalar
     variable: bendingAngle
     diag: "../output/diag.gnssro_cosmic2_2024022400.nc"
-    outdir: "../plot_output"
+    outdir: "./plot-outputs-obs"
     diagnostics:
       hist: true
 
@@ -35,7 +35,7 @@ observations:
     type: vector
     variable: windSpeed
     diag: "../output/diag.satwnd.abi_goes-16_2024022400.nc"
-    outdir: "../plot_output"
+    outdir: "./plot-outputs-obs"
     diagnostics:
       hist: true
 
@@ -46,7 +46,7 @@ observations:
     type: vector
     variable: windSpeed
     diag: "../output/diag.scatwnd.ascat_metop-b_2024022400.nc"
-    outdir: "../plot_output"
+    outdir: "./plot-outputs-obs"
     diagnostics:
       hist: true
 
@@ -57,6 +57,6 @@ observations:
     type: scalar
     variable: stationPressure
     diag: "../output/diag.conventional_ps_2024022400.nc"
-    outdir: "../plot_output"
+    outdir: "./plot-outputs-obs"
     diagnostics:
       hist: true
