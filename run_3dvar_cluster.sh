@@ -32,7 +32,7 @@ cp -r ${cdir}/input_yaml/jedi_3dvar_fv3* ${exp_dir_path}
 ln -nsf ${JEDI_INPUT_PATH}/* ${exp_dir_path}
 
 # Copy diagnostics to experimental case directory (reference plot dir is excluded)
-rsync -av --exclude 'diag-results' ${cdir}/diagnostics ${exp_dir_path}
+rsync -av --exclude 'diag-results' ${cdir}/ufs_da_diagnostics ${exp_dir_path}
 
 # Move to experimental case directory
 cd ${exp_dir_path}
