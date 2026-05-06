@@ -13,7 +13,7 @@ cd "${JEDI_PDIR}"
 git clone https://github.com/chan-hoo/GDASApp.git
 cd GDASApp
 # For specific hash
-git checkout 96009a8
+git checkout e6532bb
 git submodule update --init --recursive
 # Run build script
 export BUILD_SOCA="OFF"
