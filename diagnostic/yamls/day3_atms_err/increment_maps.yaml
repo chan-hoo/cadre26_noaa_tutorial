@@ -16,10 +16,10 @@ experiments:
   - name: ctrl
     prefix: "/home/ubuntu/cadre26_noaa_tutorial/exp_case/cadre26.132/output/ufsda.t00z.atminc.cubed_sphere_grid.tile"
 
-  - name: atms-thining
-    prefix: "/home/ubuntu/cadre26_noaa_tutorial/exp_case/cadre26.133/output/ufsda.t00z.atminc.cubed_sphere_grid.tile"
+  - name: nicas-length-scale
+    prefix: "/home/ubuntu/cadre26_noaa_tutorial/exp_case/cadre26.136/output/ufsda.t00z.atminc.cubed_sphere_grid.tile"
 
 grid:
   prefix: "/scratch/cadre26/input_data/grid/C96_grid.tile"
 
-output_dir: "./day2_hyb_weight/spectra-inc"
+output_dir: "./day3_atms_err/inc_plots"

@@ -8,7 +8,7 @@ observations:
   - label: ATMS
     type: atms
     variable: brightnessTemperature
-    diag: "/work2/noaa/epic/CADRE2026/cadre26.8487509.day2_hyb_wght/output/diag.atms_n20_2024022400.nc"
+    diag: "/home/ubuntu/cadre26_noaa_tutorial/exp_case/cadre26.133/output/diag.atms_n20_2024022400.nc"
     diagnostics:
       hist: true
       stats: true
@@ -22,7 +22,7 @@ observations:
   - label: GNSSRO
     type: scalar
     variable: bendingAngle
-    diag: "/work2/noaa/epic/CADRE2026/cadre26.8487509.day2_hyb_wght/output/diag.gnssro_cosmic2_2024022400.nc"
+    diag: "/home/ubuntu/cadre26_noaa_tutorial/exp_case/cadre26.133/output/diag.gnssro_cosmic2_2024022400.nc"
     diagnostics:
       hist: true
 
@@ -32,7 +32,7 @@ observations:
   - label: SATWND
     type: vector
     variable: windSpeed
-    diag: "/work2/noaa/epic/CADRE2026/cadre26.8487509.day2_hyb_wght/output/diag.satwnd.abi_goes-16_2024022400.nc"
+    diag: "/home/ubuntu/cadre26_noaa_tutorial/exp_case/cadre26.133/output/diag.satwnd.abi_goes-16_2024022400.nc"
     diagnostics:
       hist: true
 
@@ -42,7 +42,7 @@ observations:
   - label: SCATWND
     type: vector
     variable: windSpeed
-    diag: "/work2/noaa/epic/CADRE2026/cadre26.8487509.day2_hyb_wght/output/diag.scatwnd.ascat_metop-b_2024022400.nc"
+    diag: "/home/ubuntu/cadre26_noaa_tutorial/exp_case/cadre26.133/output/diag.scatwnd.ascat_metop-b_2024022400.nc"
     diagnostics:
       hist: true
 
@@ -52,6 +52,6 @@ observations:
   - label: CONVENTIONAL_PS
     type: scalar
     variable: stationPressure
-    diag: "/work2/noaa/epic/CADRE2026/cadre26.8487509.day2_hyb_wght/output/diag.conventional_ps_2024022400.nc"
+    diag: "/home/ubuntu/cadre26_noaa_tutorial/exp_case/cadre26.133/output/diag.conventional_ps_2024022400.nc"
     diagnostics:
       hist: true
