@@ -20,6 +20,6 @@ experiments:
     prefix: "/home/ubuntu/cadre26_noaa_tutorial/exp_case/cadre26.133/output/ufsda.t00z.atminc.cubed_sphere_grid.tile"
 
 grid:
-  prefix: "/work2/noaa/epic/CADRE2026/grid/C96_grid.tile"
+  prefix: "/scratch/cadre26/input_data/grid/C96_grid.tile"
 
 output_dir: "./day2_hyb_weight/inc_plots"
