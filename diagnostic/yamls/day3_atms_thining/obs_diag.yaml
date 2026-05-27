@@ -1,4 +1,7 @@
-outdir: "./day3_atms_thining/obs-diag"
+output_dir: "./day3_atms_thining/obs-diag"
+
+# Shared prefix for all diag files
+prefix_root: "/work2/noaa/epic/CADRE2026/cadre26.8487557.day3_thinning/output"
 
 observations:
 
@@ -8,13 +11,15 @@ observations:
   - label: ATMS
     type: atms
     variable: brightnessTemperature
-    diag: "/home/ubuntu/cadre26_noaa_tutorial/exp_case/cadre26.135/output/diag.atms_n20_2024022400.nc"
+    file: "diag.atms_n20_2024022400.nc"
     diagnostics:
       hist: true
       stats: true
       extended: true
       scanpos: true
       latbins: true
+      #scatter_map: false
+      #scatter_map_channels: [1, 2]     
 
   # ------------------------------------------------------------
   # GNSSRO Bending Angle (scalar)
@@ -22,7 +27,7 @@ observations:
   - label: GNSSRO
     type: scalar
     variable: bendingAngle
-    diag: "/home/ubuntu/cadre26_noaa_tutorial/exp_case/cadre26.135/output/diag.gnssro_cosmic2_2024022400.nc"
+    file: "diag.gnssro_cosmic2_2024022400.nc"
     diagnostics:
       hist: true
 
@@ -32,7 +37,7 @@ observations:
   - label: SATWND
     type: vector
     variable: windSpeed
-    diag: "/home/ubuntu/cadre26_noaa_tutorial/exp_case/cadre26.135/output/diag.satwnd.abi_goes-16_2024022400.nc"
+    file: "diag.satwnd.abi_goes-16_2024022400.nc"
     diagnostics:
       hist: true
 
@@ -42,7 +47,7 @@ observations:
   - label: SCATWND
     type: vector
     variable: windSpeed
-    diag: "/home/ubuntu/cadre26_noaa_tutorial/exp_case/cadre26.135/output/diag.scatwnd.ascat_metop-b_2024022400.nc"
+    file: "diag.scatwnd.ascat_metop-b_2024022400.nc"
     diagnostics:
       hist: true
 
@@ -52,6 +57,6 @@ observations:
   - label: CONVENTIONAL_PS
     type: scalar
     variable: stationPressure
-    diag: "/home/ubuntu/cadre26_noaa_tutorial/exp_case/cadre26.135/output/diag.conventional_ps_2024022400.nc"
+    file: "diag.conventional_ps_2024022400.nc"
     diagnostics:
       hist: true
