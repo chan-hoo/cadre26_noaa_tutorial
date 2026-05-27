@@ -20,7 +20,7 @@ experiments:
 #    prefix: "/work2/noaa/epic/CADRE2026/cadre26.8487557.day3_thinning/output/ufsda.t00z.atminc.cubed_sphere_grid.tile"
 
 grid:
-  prefix: "/work2/noaa/epic/CADRE2026/grid/C96_grid.tile"
+  prefix: "/home/ubuntu/cadre26_noaa_tutorial/cadre26/input_data/grid/C96_grid.tile"
 
 output_dir: "./day1_ctrl/inc_plots"
 

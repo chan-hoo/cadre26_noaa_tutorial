@@ -20,7 +20,7 @@ experiments:
     prefix: "/work2/noaa/epic/jongkim/CADRE-DA-training/year2_cases/exp_case/cadre26.8897035.day3_atms_err08/output/ufsda.t00z.atminc.cubed_sphere_grid.tile"
 
 grid:
-  prefix: "/work2/noaa/epic/CADRE2026/grid/C96_grid.tile"
+  prefix: "/home/ubuntu/cadre26_noaa_tutorial/cadre26/input_data/grid/C96_grid.tile"
 
 output_dir: "./day3_atms_err08/inc_plots"
 
