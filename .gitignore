@@ -2,5 +2,8 @@ ufs_da_diagnostics/__pychache__/
 py_env/cadre_pyenv/
 exp_case/
 input_yaml/jedi_3dvar_fv3*
+cadre26-input-data.tar.gz
+cadre26/
+ufs_da_diagnostics/
 log.*
 *.swp
